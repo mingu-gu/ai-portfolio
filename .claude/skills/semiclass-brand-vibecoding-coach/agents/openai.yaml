@@ -1,0 +1,7 @@
+interface:
+  display_name: "SemiClass Brand Vibe Coach"
+  short_description: "브랜드 웹사이트 수업 진행도 코치"
+  brand_color: "#068FFF"
+  default_prompt: "Use $semiclass-brand-vibecoding-coach to check my current class progress and tell me the next step."
+policy:
+  allow_implicit_invocation: true

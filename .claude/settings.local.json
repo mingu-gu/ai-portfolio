@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(bash \"semiclass-brand-vibecoding-coach-portable/install.sh\" .)",
+      "Bash(node \"C:/Users/user/Desktop/작업_CLASS/semiclass-brand-vibecoding-coach-portable/.claude/skills/semiclass-brand-vibecoding-coach/scripts/progress.mjs\" scan \"C:/Users/user/Desktop/작업_CLASS\")",
+      "PowerShell(node \"C:\\\\Users\\\\user\\\\Desktop\\\\�۾�_CLASS\\\\semiclass-brand-vibecoding-coach-portable\\\\.claude\\\\skills\\\\semiclass-brand-vibecoding-coach\\\\scripts\\\\progress.mjs\" scan \"C:\\\\Users\\\\user\\\\Desktop\\\\�۾�_CLASS\")",
+      "WebFetch(domain:www.ainspire.co.kr)",
+      "mcp__Claude_in_Chrome__tabs_context_mcp",
+      "PowerShell(\\(Get-Command npx -ErrorAction Stop\\).Source)",
+      "mcp__Claude_Preview__preview_start"
+    ]
+  }
+}
