@@ -114,12 +114,24 @@ section h2 {
   margin-bottom: 28px;
 }
 
+.hero-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.hero-title i {
+  font-size: 3rem;
+  color: #ff6b35;
+}
+
 .hero h1 {
   font-size: 3.4rem;
   font-weight: 900;
   line-height: 1.2;
   color: #fff;
-  margin-bottom: 24px;
   letter-spacing: -0.03em;
 }
 
@@ -409,6 +421,10 @@ footer {
   }
 
   .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-title i {
     font-size: 2.2rem;
   }
 
