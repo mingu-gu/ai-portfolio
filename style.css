@@ -135,6 +135,13 @@ section h2 {
   letter-spacing: -0.03em;
 }
 
+.hero-tagline {
+  font-size: 1.2rem;
+  color: #ccc;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
 .hero-desc {
   font-size: 1.1rem;
   color: #888;
