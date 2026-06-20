@@ -77,7 +77,7 @@ a {
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.15em;
-  color: #6c5ce7;
+  color: #ff6b35;
   margin-bottom: 12px;
   text-transform: uppercase;
 }
@@ -98,7 +98,7 @@ section h2 {
   align-items: center;
   justify-content: center;
   text-align: center;
-  background: radial-gradient(ellipse at 50% 0%, #1a1040 0%, #0a0a0a 70%);
+  background: radial-gradient(ellipse at 50% 0%, #2b1a0a 0%, #0a0a0a 70%);
   padding: 120px 28px 80px;
 }
 
@@ -110,7 +110,7 @@ section h2 {
   font-size: 0.8rem;
   font-weight: 700;
   letter-spacing: 0.2em;
-  color: #6c5ce7;
+  color: #ff6b35;
   margin-bottom: 28px;
 }
 
@@ -133,7 +133,7 @@ section h2 {
 .hero-btn {
   display: inline-block;
   padding: 14px 36px;
-  background: #6c5ce7;
+  background: #ff6b35;
   color: #fff;
   font-weight: 600;
   font-size: 0.95rem;
@@ -142,7 +142,7 @@ section h2 {
 }
 
 .hero-btn:hover {
-  background: #5a4bd1;
+  background: #e55a2b;
   transform: translateY(-2px);
 }
 
@@ -224,7 +224,7 @@ section h2 {
 
 .project-thumb {
   height: 160px;
-  background: linear-gradient(135deg, #1a1040, #2d1b69);
+  background: linear-gradient(135deg, #2b1a0a, #4a2510);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -249,7 +249,7 @@ section h2 {
 .project-tags span {
   font-size: 0.7rem;
   font-weight: 600;
-  color: #6c5ce7;
+  color: #ff6b35;
   background: rgba(108, 92, 231, 0.12);
   padding: 3px 10px;
   border-radius: 20px;
@@ -290,7 +290,7 @@ section h2 {
 .skill-card h4 {
   font-size: 0.75rem;
   font-weight: 700;
-  color: #6c5ce7;
+  color: #ff6b35;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   margin-bottom: 14px;
