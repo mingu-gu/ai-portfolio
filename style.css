@@ -317,6 +317,18 @@ section h2 {
   color: #bbb;
   padding: 4px 0;
   font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.skill-card li i {
+  font-size: 16px;
+  color: #ff6b35;
+}
+
+.skill-card h4 i {
+  font-size: 14px;
 }
 
 /* FAQ */
