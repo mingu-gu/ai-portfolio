@@ -350,17 +350,49 @@ section h2 {
   border-top: 1px solid rgba(255, 255, 255, 0.06);
 }
 
+.faq-q, .faq-a {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.faq-q {
+  margin-bottom: 14px;
+}
+
+.faq-badge {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #ff6b35;
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1px;
+}
+
+.faq-badge-a {
+  background: #333;
+  color: #bbb;
+}
+
 .faq-item h3 {
   font-size: 1.05rem;
   font-weight: 700;
   color: #eee;
-  margin-bottom: 10px;
+  margin: 0;
+  line-height: 1.6;
 }
 
 .faq-item p {
   color: #777;
   font-size: 0.92rem;
   line-height: 1.7;
+  margin: 0;
 }
 
 /* Contact */
