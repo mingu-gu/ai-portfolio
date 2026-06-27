@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>영상 제작 의뢰 - AI Video Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Nav -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">AI Video Portfolio</a>
+      <div class="nav-links">
+        <a href="index.html#about">소개</a>
+        <a href="index.html#projects">프로젝트</a>
+        <a href="index.html#skills">기술</a>
+        <a href="index.html#faq">FAQ</a>
+        <a href="inquiry.html" class="nav-active">의뢰</a>
+        <a href="index.html#contact">연락처</a>
+      </div>
+      <button id="login-btn" class="login-btn">로그인</button>
+    </div>
+  </nav>
+
+  <!-- Inquiry Hero -->
+  <section class="inquiry-hero">
+    <div class="container">
+      <p class="section-label">INQUIRY</p>
+      <h1>영상 제작 의뢰</h1>
+      <p class="inquiry-desc">영상 제작이 필요하시면 아래 폼을 작성해주세요. 확인 후 연락드리겠습니다.</p>
+    </div>
+  </section>
+
+  <!-- Inquiry Form -->
+  <section class="inquiry">
+    <div class="container">
+      <form id="inquiry-form" class="inquiry-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="inq-name">이름 *</label>
+            <input type="text" id="inq-name" placeholder="이름을 입력하세요" required />
+          </div>
+          <div class="form-group">
+            <label for="inq-email">이메일 *</label>
+            <input type="email" id="inq-email" placeholder="이메일을 입력하세요" required />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="inq-phone">연락처</label>
+            <input type="text" id="inq-phone" placeholder="010-0000-0000" />
+          </div>
+          <div class="form-group">
+            <label for="inq-type">의뢰 유형</label>
+            <select id="inq-type">
+              <option value="">선택해주세요</option>
+              <option value="광고 영상">광고 영상</option>
+              <option value="뮤직비디오">뮤직비디오</option>
+              <option value="브랜드 소개">브랜드 소개</option>
+              <option value="다큐멘터리">다큐멘터리</option>
+              <option value="기타">기타</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inq-budget">예산</label>
+          <input type="text" id="inq-budget" placeholder="예: 50만원 이내, 협의 가능" />
+        </div>
+        <div class="form-group">
+          <label for="inq-message">의뢰 내용 *</label>
+          <textarea id="inq-message" rows="5" placeholder="어떤 영상을 만들고 싶으신지 알려주세요" required></textarea>
+        </div>
+        <p id="inquiry-status" class="inquiry-status"></p>
+        <button type="submit" class="inquiry-submit">보내기</button>
+      </form>
+
+      <!-- 받은 문의 목록 (로그인 시에만 표시) -->
+      <div id="inquiry-admin" style="display:none;">
+        <h3 class="inquiry-admin-title">받은 문의</h3>
+        <div id="inquiry-list"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 로그인 모달 -->
+  <div id="login-modal" class="modal">
+    <div class="modal-content">
+      <button id="login-close" class="modal-close">&times;</button>
+      <h3>로그인</h3>
+      <form id="login-form">
+        <label for="login-email">이메일</label>
+        <input type="email" id="login-email" placeholder="이메일을 입력하세요" required />
+        <label for="login-password">비밀번호</label>
+        <input type="password" id="login-password" placeholder="비밀번호를 입력하세요" required />
+        <p id="login-error" class="login-error"></p>
+        <button type="submit" class="modal-submit">로그인</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="inquiry-app.js"></script>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 AI Video Portfolio. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

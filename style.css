@@ -541,9 +541,27 @@ footer {
   font-size: 0.95rem;
 }
 
+/* Inquiry Hero */
+.inquiry-hero {
+  padding: 120px 0 40px;
+  background: radial-gradient(ellipse at 50% 0%, #2b1a0a 0%, #0a0a0a 70%);
+}
+
+.inquiry-hero h1 {
+  font-size: 2.4rem;
+  font-weight: 900;
+  color: #fff;
+  margin-bottom: 16px;
+  letter-spacing: -0.02em;
+}
+
+.nav-active {
+  color: #ff6b35 !important;
+}
+
 /* Inquiry Form */
 .inquiry {
-  padding: 100px 0;
+  padding: 60px 0 100px;
   background: #0e0e0e;
 }
 

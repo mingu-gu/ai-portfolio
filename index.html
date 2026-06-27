@@ -21,7 +21,7 @@
         <a href="#projects">프로젝트</a>
         <a href="#skills">기술</a>
         <a href="#faq">FAQ</a>
-        <a href="#inquiry">의뢰</a>
+        <a href="inquiry.html">의뢰</a>
         <a href="#contact">연락처</a>
       </div>
       <button id="login-btn" class="login-btn">로그인</button>
@@ -152,60 +152,6 @@
           <div class="faq-q"><span class="faq-badge">Q</span><h3>AI 영상 제작에 비용이 많이 드나요?</h3></div>
           <div class="faq-a"><span class="faq-badge faq-badge-a">A</span><p>대부분의 AI 도구는 무료 또는 저렴한 구독으로 시작할 수 있습니다. 프로젝트 규모에 따라 유연하게 조율 가능합니다.</p></div>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Inquiry Form -->
-  <section class="inquiry" id="inquiry">
-    <div class="container">
-      <p class="section-label">INQUIRY</p>
-      <h2>영상 제작 의뢰</h2>
-      <p class="inquiry-desc">영상 제작이 필요하시면 아래 폼을 작성해주세요. 확인 후 연락드리겠습니다.</p>
-      <form id="inquiry-form" class="inquiry-form">
-        <div class="form-row">
-          <div class="form-group">
-            <label for="inq-name">이름 *</label>
-            <input type="text" id="inq-name" placeholder="이름을 입력하세요" required />
-          </div>
-          <div class="form-group">
-            <label for="inq-email">이메일 *</label>
-            <input type="email" id="inq-email" placeholder="이메일을 입력하세요" required />
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="form-group">
-            <label for="inq-phone">연락처</label>
-            <input type="text" id="inq-phone" placeholder="010-0000-0000" />
-          </div>
-          <div class="form-group">
-            <label for="inq-type">의뢰 유형</label>
-            <select id="inq-type">
-              <option value="">선택해주세요</option>
-              <option value="광고 영상">광고 영상</option>
-              <option value="뮤직비디오">뮤직비디오</option>
-              <option value="브랜드 소개">브랜드 소개</option>
-              <option value="다큐멘터리">다큐멘터리</option>
-              <option value="기타">기타</option>
-            </select>
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="inq-budget">예산</label>
-          <input type="text" id="inq-budget" placeholder="예: 50만원 이내, 협의 가능" />
-        </div>
-        <div class="form-group">
-          <label for="inq-message">의뢰 내용 *</label>
-          <textarea id="inq-message" rows="4" placeholder="어떤 영상을 만들고 싶으신지 알려주세요" required></textarea>
-        </div>
-        <p id="inquiry-status" class="inquiry-status"></p>
-        <button type="submit" class="inquiry-submit">보내기</button>
-      </form>
-
-      <!-- 받은 문의 목록 (로그인 시에만 표시) -->
-      <div id="inquiry-admin" style="display:none;">
-        <h3 class="inquiry-admin-title">받은 문의</h3>
-        <div id="inquiry-list"></div>
       </div>
     </div>
   </section>
