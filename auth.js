@@ -1,12 +1,11 @@
-const loginBtn = document.getElementById('login-btn');
-const loginModal = document.getElementById('login-modal');
-const loginClose = document.getElementById('login-close');
-const loginForm = document.getElementById('login-form');
-const loginEmail = document.getElementById('login-email');
-const loginPassword = document.getElementById('login-password');
-const loginError = document.getElementById('login-error');
-
-let currentUser = null;
+var loginBtn = document.getElementById('login-btn');
+var loginModal = document.getElementById('login-modal');
+var loginClose = document.getElementById('login-close');
+var loginForm = document.getElementById('login-form');
+var loginEmail = document.getElementById('login-email');
+var loginPassword = document.getElementById('login-password');
+var loginError = document.getElementById('login-error');
+var currentUser = null;
 
 function showModal() {
   loginModal.style.display = 'flex';
@@ -21,11 +20,7 @@ function hideModal() {
 
 function updateUI(user) {
   currentUser = user;
-  if (user) {
-    loginBtn.textContent = '로그아웃';
-  } else {
-    loginBtn.textContent = '로그인';
-  }
+  loginBtn.textContent = user ? '로그아웃' : '로그인';
 }
 
 loginBtn.addEventListener('click', function () {
@@ -44,29 +39,26 @@ loginModal.addEventListener('click', function (e) {
   if (e.target === loginModal) hideModal();
 });
 
-loginForm.addEventListener('submit', async function (e) {
+loginForm.addEventListener('submit', function (e) {
   e.preventDefault();
   loginError.textContent = '';
 
-  const email = loginEmail.value;
-  const password = loginPassword.value;
+  var email = loginEmail.value;
+  var password = loginPassword.value;
 
-  const { data, error } = await supabase.auth.signInWithPassword({
+  supabase.auth.signInWithPassword({
     email: email,
     password: password
-  });
-
-  if (error) {
-    if (error.message === 'Invalid login credentials') {
+  }).then(function (result) {
+    if (result.error) {
       loginError.textContent = '이메일 또는 비밀번호가 맞지 않습니다.';
-    } else {
-      loginError.textContent = '로그인 중 문제가 발생했습니다.';
+      return;
     }
-    return;
-  }
-
-  hideModal();
-  updateUI(data.user);
+    hideModal();
+    updateUI(result.data.user);
+  }).catch(function () {
+    loginError.textContent = '로그인 중 문제가 발생했습니다.';
+  });
 });
 
 supabase.auth.getUser().then(function (result) {
