@@ -461,6 +461,118 @@ footer {
   font-size: 0.8rem;
 }
 
+/* Login Button */
+.login-btn {
+  background: #ff6b35;
+  color: #fff;
+  border: none;
+  padding: 6px 18px;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.login-btn:hover {
+  background: #e55a2b;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 200;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background: #1a1a1a;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+  padding: 36px;
+  width: 100%;
+  max-width: 380px;
+  position: relative;
+}
+
+.modal-content h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.modal-close {
+  position: absolute;
+  top: 14px;
+  right: 18px;
+  background: none;
+  border: none;
+  color: #666;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.modal-close:hover {
+  color: #fff;
+}
+
+.modal-content label {
+  display: block;
+  font-size: 0.85rem;
+  color: #999;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+.modal-content input {
+  width: 100%;
+  padding: 10px 14px;
+  background: #111;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: #fff;
+  font-size: 0.95rem;
+  margin-bottom: 16px;
+  outline: none;
+}
+
+.modal-content input:focus {
+  border-color: #ff6b35;
+}
+
+.modal-submit {
+  width: 100%;
+  padding: 12px;
+  background: #ff6b35;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.modal-submit:hover {
+  background: #e55a2b;
+}
+
+.login-error {
+  color: #e24b4a;
+  font-size: 0.85rem;
+  margin-bottom: 12px;
+  min-height: 20px;
+}
+
 /* Mobile */
 @media (max-width: 768px) {
   .nav-links {
