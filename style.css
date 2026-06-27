@@ -541,6 +541,37 @@ footer {
   font-size: 0.95rem;
 }
 
+/* Inquiry CTA (메인 페이지) */
+.inquiry-cta {
+  padding: 100px 0;
+  text-align: center;
+  background: #0e0e0e;
+}
+
+.inquiry-cta-desc {
+  color: #888;
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: 36px;
+}
+
+.inquiry-cta-btn {
+  display: inline-block;
+  padding: 16px 44px;
+  background: #ff6b35;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 50px;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.inquiry-cta-btn:hover {
+  background: #e55a2b;
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+
 /* Inquiry Hero */
 .inquiry-hero {
   padding: 120px 0 40px;
