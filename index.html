@@ -82,64 +82,9 @@
     <div class="container">
       <p class="section-label">PROJECTS</p>
       <h2>만들어온 영상 프로젝트들</h2>
-      <div class="project-grid">
-
-        <div class="project-card">
-          <div class="project-thumb">
-            <span>01</span>
-          </div>
-          <div class="project-info">
-            <div class="project-tags">
-              <span>Sora</span>
-              <span>Short-form</span>
-            </div>
-            <h3>AI 숏폼 광고 영상</h3>
-            <p>AI 이미지 생성과 영상 도구를 활용해 제품 홍보용 15초 숏폼 광고를 제작했습니다.</p>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <div class="project-thumb">
-            <span>02</span>
-          </div>
-          <div class="project-info">
-            <div class="project-tags">
-              <span>Runway</span>
-              <span>Music Video</span>
-            </div>
-            <h3>AI 뮤직비디오</h3>
-            <p>AI로 생성한 비주얼과 음악을 결합해 하나의 뮤직비디오로 완성한 프로젝트입니다.</p>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <div class="project-thumb">
-            <span>03</span>
-          </div>
-          <div class="project-info">
-            <div class="project-tags">
-              <span>ElevenLabs</span>
-              <span>Narration</span>
-            </div>
-            <h3>AI 내레이션 다큐멘터리</h3>
-            <p>AI 음성 합성으로 내레이션을 만들고, AI 이미지로 장면을 구성한 미니 다큐멘터리입니다.</p>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <div class="project-thumb">
-            <span>04</span>
-          </div>
-          <div class="project-info">
-            <div class="project-tags">
-              <span>Midjourney</span>
-              <span>Branding</span>
-            </div>
-            <h3>AI 브랜드 소개 영상</h3>
-            <p>AI로 생성한 이미지와 모션을 활용해 가상 브랜드의 소개 영상을 만들었습니다.</p>
-          </div>
-        </div>
-
+      <button id="add-project-btn" class="add-project-btn" style="display:none;">+ 새 프로젝트 추가</button>
+      <div id="project-grid" class="project-grid">
+        <p id="project-loading" style="color:#666;">프로젝트를 불러오는 중...</p>
       </div>
     </div>
   </section>
@@ -235,6 +180,27 @@
       </div>
     </div>
   </section>
+
+  <!-- 프로젝트 추가/수정 팝업 -->
+  <div id="project-modal" class="modal">
+    <div class="modal-content">
+      <button id="project-modal-close" class="modal-close">&times;</button>
+      <h3 id="project-modal-title">새 프로젝트 추가</h3>
+      <form id="project-form">
+        <input type="hidden" id="project-id" />
+        <label for="project-title-input">제목</label>
+        <input type="text" id="project-title-input" placeholder="프로젝트 제목" required />
+        <label for="project-desc-input">설명</label>
+        <textarea id="project-desc-input" placeholder="프로젝트 설명" rows="3" style="width:100%;padding:10px 14px;background:#111;border:1px solid rgba(255,255,255,0.1);border-radius:8px;color:#fff;font-size:0.95rem;margin-bottom:16px;outline:none;resize:vertical;font-family:inherit;"></textarea>
+        <label for="project-tags-input">태그 (쉼표로 구분)</label>
+        <input type="text" id="project-tags-input" placeholder="예: Sora,Short-form" />
+        <label for="project-video-input">영상 링크</label>
+        <input type="text" id="project-video-input" placeholder="https://youtube.com/..." />
+        <p id="project-error" class="login-error"></p>
+        <button type="submit" class="modal-submit">저장</button>
+      </form>
+    </div>
+  </div>
 
   <!-- 로그인 모달 -->
   <div id="login-modal" class="modal">
